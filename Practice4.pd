@@ -1,0 +1,160 @@
+#N canvas 960 0 944 994 10;
+#X obj 86 55 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 83 84 mtof;
+#X obj 83 115 osc~;
+#X obj 81 181 dac~;
+#X obj 164 181 tabwrite~ sine;
+#X obj 213 103 metro 100;
+#X obj 213 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 92 271 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 88 299 mtof;
+#X obj 86 422 dac~;
+#X obj 218 344 metro 100;
+#X obj 218 315 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 169 422 tabwrite~ sawtooth;
+#X obj 88 330 phasor~;
+#X obj 89 479 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 86 536 mtof;
+#X obj 89 675 dac~;
+#X obj 221 591 metro 100;
+#X obj 221 562 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 172 675 tabwrite~ sawtooth;
+#X obj 86 567 phasor~;
+#X obj 86 598 expr~ $v1 > 0.5;
+#X text 80 34 Sine Wave Oscillator;
+#X text 86 252 Sawtooth Wave Oscillator;
+#X text 82 461 Square Wave Oscillator;
+#X floatatom 141 74 5 0 0 0 - - -;
+#X floatatom 146 315 5 0 0 0 - - -;
+#X floatatom 147 531 5 0 0 0 - - -;
+#X obj 354 45 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4600 1;
+#X obj 529 45 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 800 1;
+#X obj 381 74 mtof;
+#X obj 381 105 phasor~;
+#X obj 526 74 mtof;
+#X obj 526 105 osc~;
+#X obj 447 181 *~ 0.5;
+#X obj 425 237 dac~;
+#X obj 564 237 tabwrite~ additive;
+#X obj 599 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 599 210 metro 100;
+#X text 414 26 Sawtooth - Sine Additive Oscillators;
+#X obj 395 309 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 468 341 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 392 338 mtof;
+#X obj 465 370 mtof;
+#X obj 409 536 dac~;
+#X obj 528 423 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 513 474 metro 100;
+#X obj 392 369 osc~;
+#X obj 465 401 phasor~;
+#X obj 431 454 *~;
+#X obj 493 510 tabwrite~ am;
+#X text 428 290 Simple AM Oscillator;
+#X obj 401 637 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 398 671 mtof;
+#X obj 398 707 osc~;
+#X floatatom 497 671 5 0 0 0 - - -;
+#X obj 497 706 osc~;
+#X obj 460 730 +~ 1;
+#X obj 460 766 *~ 0.5;
+#X obj 400 794 *~;
+#X obj 400 830 dac~;
+#X obj 546 730 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 546 764 metro 100;
+#X obj 511 830 tabwrite~ am;
+#X text 431 616 Tremolo;
+#X obj 88 737 adc~;
+#X obj 125 782 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 122 812 mtof;
+#X obj 120 847 osc~;
+#X obj 89 904 *~;
+#X obj 87 952 dac~;
+#X obj 206 839 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 191 890 metro 100;
+#X obj 173 926 tabwrite~ ringmod;
+#X text 96 719 Ring Modulation (adc is input);
+#X connect 0 0 1 0;
+#X connect 0 0 25 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 7 0 26 0;
+#X connect 8 0 13 0;
+#X connect 10 0 12 0;
+#X connect 11 0 10 0;
+#X connect 13 0 9 0;
+#X connect 13 0 9 1;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 14 0 27 0;
+#X connect 15 0 20 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 0;
+#X connect 20 0 21 0;
+#X connect 21 0 16 0;
+#X connect 21 0 16 1;
+#X connect 21 0 19 0;
+#X connect 28 0 30 0;
+#X connect 29 0 32 0;
+#X connect 30 0 31 0;
+#X connect 31 0 34 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 36 0;
+#X connect 34 0 35 0;
+#X connect 34 0 35 1;
+#X connect 37 0 38 0;
+#X connect 38 0 36 0;
+#X connect 40 0 42 0;
+#X connect 41 0 43 0;
+#X connect 42 0 47 0;
+#X connect 43 0 48 0;
+#X connect 45 0 46 0;
+#X connect 46 0 50 0;
+#X connect 47 0 49 0;
+#X connect 48 0 49 1;
+#X connect 49 0 44 0;
+#X connect 49 0 44 1;
+#X connect 49 0 50 0;
+#X connect 52 0 53 0;
+#X connect 53 0 54 0;
+#X connect 54 0 59 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 58 0 59 1;
+#X connect 59 0 60 0;
+#X connect 59 0 60 1;
+#X connect 59 0 63 0;
+#X connect 61 0 62 0;
+#X connect 62 0 63 0;
+#X connect 65 0 69 0;
+#X connect 66 0 67 0;
+#X connect 67 0 68 0;
+#X connect 68 0 69 1;
+#X connect 69 0 70 0;
+#X connect 69 0 70 1;
+#X connect 69 0 73 0;
+#X connect 71 0 72 0;
+#X connect 72 0 73 0;
