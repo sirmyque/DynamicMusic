@@ -1,4 +1,4 @@
-#N canvas 960 0 944 994 10;
+#N canvas 0 0 944 994 10;
 #X declare -lib libdir -lib cyclone -lib flatgui;
 #N canvas 1114 256 450 300 testCounter 0;
 #X obj 118 89 float;
@@ -30,16 +30,16 @@
 -1;
 #X obj 53 6 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 25 133 import libdir cyclone flatgui;
-#X obj 25 166 cyclone/Scope~ 238 177 256 3 128 -1 1 0 0 0 0 102 255
+#X obj 32 158 import libdir cyclone flatgui;
+#X obj 32 191 cyclone/Scope~ 238 177 256 3 128 -1 1 0 0 0 0 102 255
 51 135 135 135 0;
 #X obj 21 466 unauthorized/grid grid1 200 0 199 200 0 199 1 1 1 10
 10 175 585;
 #X floatatom 24 683 5 0 0 0 - - -;
 #X floatatom 217 684 5 0 0 0 - - -;
-#X obj 709 437 envgen 200 140 1 0  ;
-#X obj 761 95 vsl 28 128 0 127 0 0 empty test_vsl empty 0 -9 0 10 -241291
--42246 -128992 3700 1;
+#X obj 693 544 envgen 200 140 1 0  ;
+#X obj 699 7 vsl 28 128 0 127 0 0 empty test_vsl empty 0 -9 0 10 -241291
+-42246 -128992 0 1;
 #X obj 520 50 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
 ;
 #N canvas 502 357 450 335 modify 0;
@@ -94,9 +94,9 @@
 #X obj 48 750 + 250;
 #X obj 87 703 / 200;
 #X obj 282 700 bang;
-#X obj 791 597 osc~;
-#X obj 791 633 dac~;
-#X obj 685 388 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 773 720 osc~;
+#X obj 773 756 dac~;
+#X obj 667 511 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 430 658 5 0 0 0 - - -;
 #X floatatom 534 659 5 0 0 0 - - -;
