@@ -66,9 +66,9 @@
 #X obj 211 80 receive synth1;
 #X obj 212 185 *~;
 #X obj 283 148 hsl 128 15 0 127 0 0 empty empty synth1_volume 8 8 0
-10 -203904 -1 -1 4500 1;
+10 -203904 -1 -1 0 1;
 #X obj 213 225 throw~ mix;
-#X obj 588 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+#X obj 588 55 bng 15 250 50 0 empty start empty 17 7 0 10 -4034 -1
 -1;
 #X obj 699 152 send time;
 #X obj 838 53 catch~ mix;
@@ -150,13 +150,13 @@
 #X obj 80 438 receive time;
 #X msg 193 468 38 40 52 44;
 #X obj 217 506 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
-10 -203904 -1 -1 50 256;
+10 -203904 -1 -1 0 256;
 #X obj 80 585 send synth2;
 #X obj 327 437 receive synth2;
 #X obj 346 541 hsl 128 15 0 127 0 0 empty empty synth2_volume 8 8 0
-10 -203904 -1 -1 3300 1;
+10 -203904 -1 -1 0 1;
 #X obj 381 471 hsl 128 15 0 127 0 0 empty empty synth2_delay 8 8 0
-10 -203904 -1 -1 12700 1;
+10 -203904 -1 -1 0 1;
 #X obj 328 574 *~;
 #X obj 328 618 throw~ mix;
 #N canvas 965 71 705 611 synth3 0;
@@ -265,7 +265,7 @@
 #X obj 97 803 send synth3;
 #X obj 291 731 receive synth3;
 #X obj 309 791 hsl 128 15 0 127 0 0 empty empty synth3_volume 8 8 0
-10 -203904 -1 -1 12700 1;
+10 -203904 -1 -1 0 1;
 #X obj 291 824 *~;
 #X obj 290 862 throw~ mix;
 #N canvas 848 240 679 478 synth4 0;
@@ -372,10 +372,10 @@
 #X obj 657 428 receive time;
 #X obj 782 429 receive synth4;
 #X obj 800 505 hsl 128 15 0 127 0 0 empty empty synth4_volume 8 8 0
-10 -203904 -1 -1 12600 1;
+10 -203904 -1 -1 0 1;
 #X obj 782 538 *~;
 #X obj 782 582 throw~ mix;
-#X obj 588 83 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 588 83 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 193 439 loadbang;
 #X obj 657 503 send synth4;
